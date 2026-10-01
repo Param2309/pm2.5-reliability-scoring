@@ -1,0 +1,434 @@
+{
+  "per_repeat": [
+    {
+      "rep": 0,
+      "n_test": 27836,
+      "prevalence_reliable": 0.3959979882166978,
+      "dummy_pr_auc": 0.3959979882166978,
+      "model_pr_auc": 0.4713890389584322,
+      "model_roc_auc": 0.6107738646896523,
+      "unrel_prevalence": 0.6040020117833022,
+      "unrel_dummy_pr_auc": 0.6040020117833022,
+      "unrel_pr_auc": 0.7075850090138339,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "n_test": 16557,
+      "prevalence_reliable": 0.42537899377906624,
+      "dummy_pr_auc": 0.42537899377906624,
+      "model_pr_auc": 0.5858568523530012,
+      "model_roc_auc": 0.6789981008281778,
+      "unrel_prevalence": 0.5746210062209337,
+      "unrel_dummy_pr_auc": 0.5746210062209337,
+      "unrel_pr_auc": 0.7361085574062656,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.4091320891465845,
+          "far": 0.426335990552111,
+          "actual_reliability": 0.573664009447889
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.0452980612429788,
+          "far": 0.29733333333333334,
+          "actual_reliability": 0.7026666666666667
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0045902035392885185,
+          "far": 0.25,
+          "actual_reliability": 0.75
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "n_test": 41418,
+      "prevalence_reliable": 0.3119416678738713,
+      "dummy_pr_auc": 0.3119416678738713,
+      "model_pr_auc": 0.348553761087384,
+      "model_roc_auc": 0.5652828673328224,
+      "unrel_prevalence": 0.6880583321261288,
+      "unrel_dummy_pr_auc": 0.6880583321261288,
+      "unrel_pr_auc": 0.748414406206093,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.6020329325414071,
+          "far": 0.654822538600361,
+          "actual_reliability": 0.34517746139963906
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.06468202230914095,
+          "far": 0.6558417319895483,
+          "actual_reliability": 0.3441582680104517
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0023178328263074024,
+          "far": 0.625,
+          "actual_reliability": 0.375
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "n_test": 47229,
+      "prevalence_reliable": 0.3844459971627602,
+      "dummy_pr_auc": 0.3844459971627602,
+      "model_pr_auc": 0.4446837582625812,
+      "model_roc_auc": 0.5848703485761642,
+      "unrel_prevalence": 0.6155540028372398,
+      "unrel_dummy_pr_auc": 0.6155540028372398,
+      "unrel_pr_auc": 0.6965953941274347,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.2739630311884647,
+          "far": 0.5464873637839092,
+          "actual_reliability": 0.4535126362160909
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.008088250862817337,
+          "far": 0.5235602094240838,
+          "actual_reliability": 0.47643979057591623
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.00014821402104639098,
+          "far": 0.2857142857142857,
+          "actual_reliability": 0.7142857142857143
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 4,
+      "n_test": 8065,
+      "prevalence_reliable": 0.3499070055796652,
+      "dummy_pr_auc": 0.3499070055796652,
+      "model_pr_auc": 0.5249752759025974,
+      "model_roc_auc": 0.6698721037790187,
+      "unrel_prevalence": 0.6500929944203347,
+      "unrel_dummy_pr_auc": 0.6500929944203347,
+      "unrel_pr_auc": 0.7673757500971451,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.1688778673279603,
+          "far": 0.3964757709251101,
+          "actual_reliability": 0.6035242290748899
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.0003719776813391197,
+          "far": 0.6666666666666666,
+          "actual_reliability": 0.3333333333333333
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 5,
+      "n_test": 31986,
+      "prevalence_reliable": 0.331207403238917,
+      "dummy_pr_auc": 0.331207403238917,
+      "model_pr_auc": 0.41729983395068526,
+      "model_roc_auc": 0.6025290966408358,
+      "unrel_prevalence": 0.6687925967610829,
+      "unrel_dummy_pr_auc": 0.6687925967610829,
+      "unrel_pr_auc": 0.7506476233318735,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.5485212280372663,
+          "far": 0.6129951553149046,
+          "actual_reliability": 0.3870048446850955
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.10717188770086913,
+          "far": 0.5242123687281214,
+          "actual_reliability": 0.4757876312718786
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.024760832864378166,
+          "far": 0.4595959595959596,
+          "actual_reliability": 0.5404040404040404
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.00018758206715438003,
+          "far": 0.5,
+          "actual_reliability": 0.5
+        }
+      ]
+    },
+    {
+      "rep": 6,
+      "n_test": 31934,
+      "prevalence_reliable": 0.43151499968685414,
+      "dummy_pr_auc": 0.43151499968685414,
+      "model_pr_auc": 0.4711708695957486,
+      "model_roc_auc": 0.5687804192737094,
+      "unrel_prevalence": 0.5684850003131459,
+      "unrel_dummy_pr_auc": 0.5684850003131459,
+      "unrel_pr_auc": 0.652614556674632,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.1543495960418363,
+          "far": 0.516737674984784,
+          "actual_reliability": 0.48326232501521604
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.0009707521763637503,
+          "far": 0.4838709677419355,
+          "actual_reliability": 0.5161290322580645
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 7,
+      "n_test": 18135,
+      "prevalence_reliable": 0.4492969396195203,
+      "dummy_pr_auc": 0.4492969396195203,
+      "model_pr_auc": 0.5289953211666069,
+      "model_roc_auc": 0.6098148936277937,
+      "unrel_prevalence": 0.5507030603804798,
+      "unrel_dummy_pr_auc": 0.5507030603804798,
+      "unrel_pr_auc": 0.6655943864391378,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.2961124896608768,
+          "far": 0.45977653631284915,
+          "actual_reliability": 0.5402234636871508
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.001488833746898263,
+          "far": 0.4074074074074074,
+          "actual_reliability": 0.5925925925925926
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 8,
+      "n_test": 11258,
+      "prevalence_reliable": 0.4018475750577367,
+      "dummy_pr_auc": 0.4018475750577367,
+      "model_pr_auc": 0.45298228333637913,
+      "model_roc_auc": 0.599063188585735,
+      "unrel_prevalence": 0.5981524249422633,
+      "unrel_dummy_pr_auc": 0.5981524249422633,
+      "unrel_pr_auc": 0.7073240256790121,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    },
+    {
+      "rep": 9,
+      "n_test": 29686,
+      "prevalence_reliable": 0.4304049046688675,
+      "dummy_pr_auc": 0.4304049046688675,
+      "model_pr_auc": 0.4805206443009217,
+      "model_roc_auc": 0.582482914900095,
+      "unrel_prevalence": 0.5695950953311325,
+      "unrel_dummy_pr_auc": 0.5695950953311325,
+      "unrel_pr_auc": 0.6673096671326496,
+      "thresholds": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "far": NaN,
+          "actual_reliability": NaN
+        }
+      ]
+    }
+  ],
+  "prevalence_reliable": {
+    "mean": 0.3911943474883956,
+    "std": 0.044129237252478526
+  },
+  "dummy_pr_auc": {
+    "mean": 0.3911943474883956,
+    "std": 0.044129237252478526
+  },
+  "model_pr_auc": {
+    "mean": 0.47264276389143367,
+    "std": 0.06198926733923004
+  },
+  "model_roc_auc": {
+    "mean": 0.6072467798234004,
+    "std": 0.036787268218171326
+  },
+  "unrel_prevalence": {
+    "mean": 0.6088056525116043,
+    "std": 0.04412923725247852
+  },
+  "unrel_dummy_pr_auc": {
+    "mean": 0.6088056525116043,
+    "std": 0.04412923725247852
+  },
+  "unrel_pr_auc": {
+    "mean": 0.7099569376108078,
+    "std": 0.037923079295290305
+  },
+  "threshold_0.5": {
+    "coverage_mean": 0.2452989233944396,
+    "coverage_std": 0.21073075677729325,
+    "far_mean": 0.5162330043534327,
+    "far_std": 0.08871797583263817,
+    "actual_reliability_mean": 0.4837669956465674,
+    "actual_reliability_std": 0.08871797583263813
+  },
+  "threshold_0.7": {
+    "coverage_mean": 0.022807178572040735,
+    "coverage_std": 0.03548032565620012,
+    "far_mean": 0.5084132407558709,
+    "far_std": 0.12107705857786645,
+    "actual_reliability_mean": 0.49158675924412915,
+    "actual_reliability_std": 0.12107705857786646
+  },
+  "threshold_0.8": {
+    "coverage_mean": 0.003181708325102048,
+    "coverage_std": 0.0073371005882178885,
+    "far_mean": 0.4050775613275613,
+    "far_std": 0.1496953375808834,
+    "actual_reliability_mean": 0.5949224386724388,
+    "actual_reliability_std": 0.1496953375808834
+  },
+  "threshold_0.9": {
+    "coverage_mean": 1.8758206715438003e-05,
+    "coverage_std": 5.627462014631401e-05,
+    "far_mean": 0.5,
+    "far_std": 0.0,
+    "actual_reliability_mean": 0.5,
+    "actual_reliability_std": 0.0
+  }
+}

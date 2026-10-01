@@ -1,0 +1,5 @@
+Candidate,delta(Non-smoky),delta(Smoky)
+Random Forest,0.982,9.697
+Linear Regression,3.23,31.061
+Neural Network,1.973,14.635
+Barkjohn,2.344,19.963

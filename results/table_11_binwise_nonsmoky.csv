@@ -1,0 +1,7 @@
+AQI_group,trust_bin,mean_trust,actual_reliability,mean_mae,samples
+Non-smoky,0.0-0.5,0.366,0.372,1.877,3520
+Non-smoky,0.5-0.6,0.554,0.626,1.113,2892
+Non-smoky,0.6-0.7,0.654,0.762,0.718,4853
+Non-smoky,0.7-0.8,0.753,0.884,0.468,7748
+Non-smoky,0.8-0.9,0.846,0.955,0.341,7818
+Non-smoky,0.9-1.0,0.923,0.986,0.254,1893
