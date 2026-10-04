@@ -29,7 +29,7 @@ A reading is labelled *reliable* when `|ref - Predicted_ref| <= δ`, where δ is
 │   └── candidates.py          runs the pipeline for RF, LR, NN and Barkjohn
 ├── experiments/               Sections IV-G, V-B to V-N
 ├── tables/                    Tables I, III, IX-XIII
-├── figures/                   Figures 1-4
+├── figures/                   Figures 1-3
 └── results/                   all outputs are written here
 ```
 
@@ -41,12 +41,12 @@ A reading is labelled *reliable* when `|ref - Predicted_ref| <= δ`, where δ is
 | Table II, Stage 1 comparison | `stage1/*.py` (Random Forest, Linear Regression, neural network, Barkjohn) | printed metrics, `*_pred_all.csv` |
 | Table III, Stage 1 bin-wise RMSE | `tables/table_03_binwise_rmse.py` | `table_03_binwise_rmse.csv` |
 | Fig. 1, Random Forest calibration | `figures/fig1_rf_calibration.py` | `fig1_rf_calibration.png` |
-| Fig. 2, LR and NN density plots | `figures/fig2_stage1_density.py` | `fig2_stage1_density.png` |
+| Supplementary (not in the paper), LR and NN density plots | `figures/fig2_stage1_density.py` | `fig2_stage1_density.png` |
 | Tables IV, VI, features and XGBoost parameters | `stage2/pipeline.py`, `stage2/candidates.py` | |
 | Table V, Stage 2 classifier comparison | `experiments/iv_g_classifier_comparison.py` | `stage2_classifier_compare_results.json` |
 | Tables IX-XIII, internal Stage 2 evaluation | `stage2/candidates.py`, `tables/stage2_tables.py` | `{RF,LR,NN,BJ}_results.json`, `table_09` to `table_13` |
-| Fig. 3, reliability diagrams | `figures/fig3_reliability_diagrams.py` | `fig3_reliability_diagrams.png` |
-| Fig. 4, coverage-MAE Pareto curves | `figures/fig4_coverage_mae_pareto.py` | `fig4_coverage_mae_pareto.png` |
+| Fig. 2, reliability diagrams | `figures/fig3_reliability_diagrams.py` | `fig3_reliability_diagrams.png` |
+| Fig. 3, coverage-MAE Pareto curves | `figures/fig4_coverage_mae_pareto.py` | `fig4_coverage_mae_pareto.png` |
 | Section V-B, safety-oriented evaluation, raw-PA Spearman check | `experiments/v_b_safety_diagnostics.py` | `rf_full_diagnostics_results.json` |
 | Section V-C, feature ablation | `experiments/v_c_feature_ablation.py` | `rf_ablation_paired_clean_results.json` |
 | Section V-D, heuristic baseline | `experiments/v_d_heuristic_baseline.py` | `heuristic_vs_ablated_paired_results.json` |
@@ -61,7 +61,7 @@ A reading is labelled *reliable* when `|ref - Predicted_ref| <= δ`, where δ is
 
 ## Data availability
 
-The hourly PurpleAir and EPA data are not redistributed in this repository. The EPA-paired PurpleAir dataset of Barkjohn et al. is available from the U.S. EPA (doi:10.23719/1522388). Additional PurpleAir readings come from the PurpleAir API (data from PurpleAir, purpleair.com) and are subject to PurpleAir's terms of use; the processed files used here are available from the authors on request. `data/README.md` lists every file that must be placed in `data/` before running the scripts. The frozen Stage 2 artefacts (`trust_pipe.pkl`, `platt.pkl`, `column_transformer.pkl`) are included.
+The hourly PurpleAir and EPA data are not redistributed in this repository. The EPA-paired PurpleAir dataset of Barkjohn et al. is available from the U.S. EPA (doi:10.23719/1528138). Additional PurpleAir readings come from the PurpleAir API (data from PurpleAir, purpleair.com) and are subject to PurpleAir's terms of use; the processed files used here are available from the authors on request. `data/README.md` lists every file that must be placed in `data/` before running the scripts. The frozen Stage 2 artefacts (`trust_pipe.pkl`, `platt.pkl`, `column_transformer.pkl`) are included.
 
 ## Environment
 
@@ -105,7 +105,7 @@ Approximate run times on a two-core machine:
 
 **Table XI and XII.** The bin-wise tables are taken from the last (tenth) sensor-disjoint repeat, which is the repeat the reported counts (28,724 Non-smoky and 962 Smoky test rows) correspond to. `RF_results.json` also stores the bin-wise table pooled over all ten repeats (`binwise`).
 
-**Random Forest row of Tables IX-XIII.** `stage2/candidates.py` runs the shared pipeline on the frozen predictions (`RF_results.json`), and Tables IX-XIII and Figs. 3 and 4 are built from that run. `experiments/v_n_regime_synthesis.py` separately stores the Random Forest row exactly as printed in the paper (`RF_reported_results.json`).
+**Random Forest row of Tables IX-XIII.** `stage2/candidates.py` runs the shared pipeline on the frozen predictions (`RF_results.json`), and Tables IX-XIII and Figs. 2 and 3 are built from that run. `experiments/v_n_regime_synthesis.py` separately stores the Random Forest row exactly as printed in the paper (`RF_reported_results.json`).
 
 **Barkjohn predictions.** `stage1/barkjohn.py` applies the piecewise Barkjohn correction to raw PA and RH and reproduces `data/bj_pred_all.csv` to floating-point precision (MAE 3.0956 over all rows).
 
