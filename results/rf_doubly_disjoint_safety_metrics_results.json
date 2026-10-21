@@ -7,9 +7,6 @@
       "dummy_pr_auc": 0.3959979882166978,
       "model_pr_auc": 0.4713890389584322,
       "model_roc_auc": 0.6107738646896523,
-      "unrel_prevalence": 0.6040020117833022,
-      "unrel_dummy_pr_auc": 0.6040020117833022,
-      "unrel_pr_auc": 0.7075850090138339,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -44,9 +41,6 @@
       "dummy_pr_auc": 0.42537899377906624,
       "model_pr_auc": 0.5858568523530012,
       "model_roc_auc": 0.6789981008281778,
-      "unrel_prevalence": 0.5746210062209337,
-      "unrel_dummy_pr_auc": 0.5746210062209337,
-      "unrel_pr_auc": 0.7361085574062656,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -81,9 +75,6 @@
       "dummy_pr_auc": 0.3119416678738713,
       "model_pr_auc": 0.348553761087384,
       "model_roc_auc": 0.5652828673328224,
-      "unrel_prevalence": 0.6880583321261288,
-      "unrel_dummy_pr_auc": 0.6880583321261288,
-      "unrel_pr_auc": 0.748414406206093,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -118,9 +109,6 @@
       "dummy_pr_auc": 0.3844459971627602,
       "model_pr_auc": 0.4446837582625812,
       "model_roc_auc": 0.5848703485761642,
-      "unrel_prevalence": 0.6155540028372398,
-      "unrel_dummy_pr_auc": 0.6155540028372398,
-      "unrel_pr_auc": 0.6965953941274347,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -155,9 +143,6 @@
       "dummy_pr_auc": 0.3499070055796652,
       "model_pr_auc": 0.5249752759025974,
       "model_roc_auc": 0.6698721037790187,
-      "unrel_prevalence": 0.6500929944203347,
-      "unrel_dummy_pr_auc": 0.6500929944203347,
-      "unrel_pr_auc": 0.7673757500971451,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -192,9 +177,6 @@
       "dummy_pr_auc": 0.331207403238917,
       "model_pr_auc": 0.41729983395068526,
       "model_roc_auc": 0.6025290966408358,
-      "unrel_prevalence": 0.6687925967610829,
-      "unrel_dummy_pr_auc": 0.6687925967610829,
-      "unrel_pr_auc": 0.7506476233318735,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -229,9 +211,6 @@
       "dummy_pr_auc": 0.43151499968685414,
       "model_pr_auc": 0.4711708695957486,
       "model_roc_auc": 0.5687804192737094,
-      "unrel_prevalence": 0.5684850003131459,
-      "unrel_dummy_pr_auc": 0.5684850003131459,
-      "unrel_pr_auc": 0.652614556674632,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -266,9 +245,6 @@
       "dummy_pr_auc": 0.4492969396195203,
       "model_pr_auc": 0.5289953211666069,
       "model_roc_auc": 0.6098148936277937,
-      "unrel_prevalence": 0.5507030603804798,
-      "unrel_dummy_pr_auc": 0.5507030603804798,
-      "unrel_pr_auc": 0.6655943864391378,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -303,9 +279,6 @@
       "dummy_pr_auc": 0.4018475750577367,
       "model_pr_auc": 0.45298228333637913,
       "model_roc_auc": 0.599063188585735,
-      "unrel_prevalence": 0.5981524249422633,
-      "unrel_dummy_pr_auc": 0.5981524249422633,
-      "unrel_pr_auc": 0.7073240256790121,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -340,9 +313,6 @@
       "dummy_pr_auc": 0.4304049046688675,
       "model_pr_auc": 0.4805206443009217,
       "model_roc_auc": 0.582482914900095,
-      "unrel_prevalence": 0.5695950953311325,
-      "unrel_dummy_pr_auc": 0.5695950953311325,
-      "unrel_pr_auc": 0.6673096671326496,
       "thresholds": [
         {
           "threshold": 0.5,
@@ -386,18 +356,6 @@
   "model_roc_auc": {
     "mean": 0.6072467798234004,
     "std": 0.036787268218171326
-  },
-  "unrel_prevalence": {
-    "mean": 0.6088056525116043,
-    "std": 0.04412923725247852
-  },
-  "unrel_dummy_pr_auc": {
-    "mean": 0.6088056525116043,
-    "std": 0.04412923725247852
-  },
-  "unrel_pr_auc": {
-    "mean": 0.7099569376108078,
-    "std": 0.037923079295290305
   },
   "threshold_0.5": {
     "coverage_mean": 0.2452989233944396,

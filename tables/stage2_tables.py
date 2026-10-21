@@ -1,4 +1,4 @@
-"""Tables IX-XIII. Internal Stage 2 metrics, threshold sweep, bin-wise reliability and delta values."""
+"""Stage 2 internal tables: aggregate metrics, threshold sweep, bin-wise reliability (Non-smoky, Smoky) and delta values."""
 import json
 
 import pandas as pd
@@ -48,11 +48,11 @@ table_xiii = pd.DataFrame([
 ])
 
 for title, table, fname in [
-    ("Table IX", table_ix, "table_09_stage2_metrics.csv"),
-    ("Table X", table_x, "table_10_threshold_sweep.csv"),
-    ("Table XI", table_xi, "table_11_binwise_nonsmoky.csv"),
-    ("Table XII", table_xii, "table_12_binwise_smoky.csv"),
-    ("Table XIII", table_xiii, "table_13_delta_values.csv"),
+    ("Aggregate metrics", table_ix, "stage2_aggregate_metrics.csv"),
+    ("Threshold sweep", table_x, "stage2_threshold_sweep.csv"),
+    ("Bin-wise, Non-smoky", table_xi, "stage2_binwise_nonsmoky.csv"),
+    ("Bin-wise, Smoky", table_xii, "stage2_binwise_smoky.csv"),
+    ("Delta values", table_xiii, "stage2_delta_values.csv"),
 ]:
     print(f"\n{title}")
     print(table.to_string(index=False))

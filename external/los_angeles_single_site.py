@@ -1,4 +1,4 @@
-"""Sections V-F and V-I. Single-sensor checks: Hoopa (in-distribution consistency check) and Los Angeles January 2025 (boundary condition)."""
+"""Section V-I. Single-sensor check: Los Angeles January 2025 (boundary condition)."""
 import json
 
 import joblib
@@ -20,7 +20,6 @@ THRESHOLDS = [0.5, 0.7, 0.8, 0.9]
 
 
 SITES = {
-    "Hoopa": "rf_pred_Hoopa.csv",
     "LA_Wildfire_Jan2025": "rf_pred_LA.csv",
 }
 

@@ -1,4 +1,4 @@
-"""Sections IV-G and V-B. Safety-oriented evaluation with unreliable as the positive class, false-accept rates and Spearman check against raw-PA error."""
+"""Section VII-A (R1). Coverage and false-accept rate of the Platt-calibrated score at thresholds t = 0.5, 0.7, 0.8, 0.9."""
 
 from config import DATA_DIR, RESULTS_DIR
 
@@ -12,8 +12,7 @@ def run_safety_diagnostics_naive_regime():
     from sklearn.linear_model import LogisticRegression
     from sklearn.metrics import roc_auc_score, average_precision_score
     from xgboost import XGBClassifier
-    from scipy.stats import spearmanr
-
+    
     AQI_EDGES = [-np.inf, 35.4, np.inf]
     AQI_LABELS = ["Non-smoky", "Smoky"]
     FULL_NUM_FEATS = ["RH","PA","Predicted_ref","lag1_PA","dp_PA","lag1_pred","dp_pred","corr",
@@ -53,7 +52,6 @@ def run_safety_diagnostics_naive_regime():
         df[roll_std_cols] = df[roll_std_cols].fillna(0.0)
         df["AQI_group"] = pd.cut(df["Predicted_ref"], bins=AQI_EDGES, labels=AQI_LABELS).astype(str).str.strip()
         df["abs_error"] = (df["ref"] - df["Predicted_ref"]).abs()
-        df["abs_error_raw_PA"] = (df["ref"] - df["PA"]).abs()
         need = FULL_NUM_FEATS + CAT_FEATS + ["abs_error"]
         df0 = df.dropna(subset=need).copy().reset_index(drop=True)
         return df0
@@ -80,12 +78,8 @@ def run_safety_diagnostics_naive_regime():
 
     n_repeats = 10
     pr_reliable, roc_reliable = [], []
-    pr_unreliable, roc_unreliable = [], []
     far_at_t = {t: [] for t in THRESHOLDS}
     cov_at_t = {t: [] for t in THRESHOLDS}
-    baseline_pr, baseline_roc = [], []
-    spearman_predref_ns, spearman_predref_s = [], []
-    spearman_rawpa_ns, spearman_rawpa_s = [], []
 
     for rep in range(n_repeats):
         gss1r = GroupShuffleSplit(n_splits=1, test_size=0.2, random_state=RANDOM_STATE+rep)
@@ -118,11 +112,6 @@ def run_safety_diagnostics_naive_regime():
         pr_reliable.append(safe_prauc(y_test, p_cal_test))
         roc_reliable.append(safe_auc(y_test, p_cal_test))
 
-        y_test_flip = 1 - y_test
-        p_flip = 1 - p_cal_test
-        pr_unreliable.append(safe_prauc(y_test_flip, p_flip))
-        roc_unreliable.append(safe_auc(y_test_flip, p_flip))
-
         for t in THRESHOLDS:
             keep = p_cal_test >= t
             cov_at_t[t].append(float(keep.mean()))
@@ -131,32 +120,15 @@ def run_safety_diagnostics_naive_regime():
             else:
                 far_at_t[t].append(np.nan)
 
-        z = (df_test["abs_dp_PA"].values) + (df_test["PA_roll_std_3"].fillna(0).values)
-        baseline_score = 1.0 / (1.0 + z)
-        baseline_pr.append(safe_prauc(y_test, baseline_score))
-        baseline_roc.append(safe_auc(y_test, baseline_score))
-
-        for grp, ns_list, s_list in [("Non-smoky", spearman_predref_ns, spearman_rawpa_ns),
-                                       ("Smoky", spearman_predref_s, spearman_rawpa_s)]:
-            m = df_test["AQI_group"].values == grp
-            if m.sum() >= 3:
-                r1,_ = spearmanr(p_cal_test[m], df_test["abs_error"].values[m])
-                r2,_ = spearmanr(p_cal_test[m], df_test["abs_error_raw_PA"].values[m])
-                ns_list.append(r1); s_list.append(r2)
-
         print(f"rep {rep+1}/{n_repeats} done ({time.time()-t0:.0f}s) pr_rel={pr_reliable[-1]:.4f} "
-              f"pr_unrel={pr_unreliable[-1]:.4f} baseline_pr={baseline_pr[-1]:.4f}", flush=True)
+              "", flush=True)
 
     def ms(v): return float(np.nanmean(v)), float(np.nanstd(v))
 
     result = {
         "pr_reliable_pos": ms(pr_reliable), "roc_reliable_pos": ms(roc_reliable),
-        "pr_unreliable_pos": ms(pr_unreliable), "roc_unreliable_pos": ms(roc_unreliable),
         "false_accept_rate": {str(t): ms(far_at_t[t]) for t in THRESHOLDS},
         "coverage": {str(t): ms(cov_at_t[t]) for t in THRESHOLDS},
-        "baseline_pr_auc": ms(baseline_pr), "baseline_roc_auc": ms(baseline_roc),
-        "spearman_predref_error": {"Non-smoky": ms(spearman_predref_ns), "Smoky": ms(spearman_predref_s)},
-        "spearman_rawPA_error": {"Non-smoky": ms(spearman_rawpa_ns), "Smoky": ms(spearman_rawpa_s)},
     }
     print(json.dumps(result, indent=2), flush=True)
     json.dump(result, open(f"{RESULTS_DIR}/rf_full_diagnostics_results.json","w"), indent=2)

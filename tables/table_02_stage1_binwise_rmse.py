@@ -30,4 +30,4 @@ for label in LABELS:
 
 table = pd.DataFrame(rows)
 print(table.to_string(index=False))
-table.to_csv(f"{RESULTS_DIR}/table_03_binwise_rmse.csv", index=False)
+table.to_csv(f"{RESULTS_DIR}/table_02_stage1_binwise_rmse.csv", index=False)

@@ -1,4 +1,4 @@
-"""Section V-L. Cold-start coverage curve."""
+"""Section VII-C (R3). Cold-start coverage at absolute Platt thresholds t = 0.5, 0.7, 0.8, 0.9 (paper: 8.0 ± 8.3% at t = 0.5, 0.5 ± 1.0% at t = 0.7)."""
 
 from config import DATA_DIR, RESULTS_DIR
 

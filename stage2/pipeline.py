@@ -268,10 +268,10 @@ def run_pipeline(model_name, pred_df, xgb_params, n_repeats=10, out_dir=RESULTS_
             }
     results["reldiag"] = reldiag_out
 
-    cov0 = pareto_curve_runs[0][0]
+    cov_stack = np.stack([c[0] for c in pareto_curve_runs])
     mae_stack = np.stack([m[1] for m in pareto_curve_runs])
     results["pareto"] = {
-        "coverage": cov0.tolist(),
+        "coverage": np.nanmean(cov_stack, axis=0).tolist(),
         "mae_mean": np.nanmean(mae_stack, axis=0).tolist(),
         "mae_std": np.nanstd(mae_stack, axis=0).tolist()
     }
